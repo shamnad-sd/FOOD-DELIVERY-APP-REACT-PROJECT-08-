@@ -30,19 +30,19 @@
     background-color: transparent;
     font-size: 16px;
     color: black;
-    border: 1px solid #3fbc2b;
+    border: 1px solid tomato;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
 }
 .Navbar button:hover{
-    background-color: #3fbc2b;
+    background-color: tomato;
     transition: 0.3s ease-in;
     color: white;
 }
 .Navbar .active{
     padding-bottom: 2px;
-    border-bottom: 2px solid #3fbc2b;
+    border-bottom: 2px solid tomato;
 }
 .Navbar li{
     cursor: pointer;
@@ -55,7 +55,12 @@
     min-width: 10px;
     min-height: 10px;
     border-radius: 5px;
-    background-color: #3fbc2b;
+    background-color: tomato;
     top: -8px;
     right: -8px;
+}
+.navbar-right img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
