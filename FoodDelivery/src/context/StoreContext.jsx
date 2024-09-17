@@ -22,17 +22,30 @@ const StoreContextProvider = (props) =>{
         setCardItem((prev)=>({...prev,[itemId]:prev[itemId]-1}))
     }
     // store local storage
-    useEffect(()=>{
-        console.log('Food Qty :',cartItem);
+    // useEffect(()=>{
+    //     console.log('Food Qty :',cartItem);
         
-    },[cartItem])
+    // },[cartItem])
+
+    //item calculation section
+    const getTotalCartAmount = () =>{
+        let totalAmount =0;
+        for(const item in cartItem){
+            if(cartItem[item]>0){
+                let itemInfo = food_list.find((product)=>product._id === item);
+                totalAmount += itemInfo.price * cartItem[item];
+            }
+        }
+        return totalAmount;
+    }
 
     const contextValue ={
         food_list,
         cartItem,
         setCardItem,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalCartAmount
     }
 
     return(
